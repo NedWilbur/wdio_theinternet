@@ -1,9 +1,10 @@
-import Page from './_base';
+import BaseView from './_base.view';
 
-class LoginPage extends Page {
-    constructor() { super("Login") }
+class LoginView extends BaseView {
+    constructor() { super("Login Page") }
 
     // Locators
+    get header() { return $('h2'); }
     get inputUsername() { return $('#username'); }
     get inputPassword() { return $('#password');}
     get btnSubmit() { return $('button[type="submit"]'); }
@@ -15,7 +16,7 @@ class LoginPage extends Page {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
-    }    
+    }
 }
 
-export default new LoginPage();
+export default new LoginView();

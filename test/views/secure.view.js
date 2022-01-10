@@ -1,4 +1,4 @@
-import Page from './_base';
+import Page from './_base.view';
 
 class SecurePage extends Page {
     // Elements

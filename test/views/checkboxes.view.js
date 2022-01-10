@@ -1,4 +1,4 @@
-import Page from './_base';
+import Page from './_base.view';
 
 class Checkboxes extends Page {
     constructor() { super("Checkboxes") }
@@ -9,11 +9,8 @@ class Checkboxes extends Page {
 
     // Methods
     navTo() { return super.navTo('checkboxes'); }
-    async clickCheckBox1() { await this.checkbox1.click(); }
-    async clickCheckBox2() { await this.checkbox2.click(); }
-
-    // Validate
-    async checkbox1Checked() { return this.checkbox1.getAttribute('checked') }
+    clickCheckBox1() { this.checkbox1.click(); }
+    clickCheckBox2() { this.checkbox2.click(); }
 }
 
 export default new LoginPage();
