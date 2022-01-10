@@ -96,3 +96,6 @@ tests/.retry_succeeded
 *.tsbuildinfo
 website/docs/Contribute.md
 website/community/Resources.md
+
+# Report files
+allure-results
