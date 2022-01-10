@@ -14,4 +14,12 @@ describe('Checkboxes', () => {
         await expect(CheckboxesView.checkbox1).not.toBeChecked();
         await expect(CheckboxesView.checkbox2).toBeChecked();
     });
+
+    it('Checkbox value changes on click', async () => {
+        await CheckboxesView.checkbox1.click();
+        await expect(CheckboxesView.checkbox1).toBeChecked();
+
+        await CheckboxesView.checkbox2.click();
+        await expect(CheckboxesView.checkbox2).not.toBeChecked();
+    });
 });
