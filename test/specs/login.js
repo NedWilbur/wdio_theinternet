@@ -1,7 +1,7 @@
 import LoginView from  '../views/login.view';
 import SecureView from '../views/secure.view';
 
-describe('My Login application', () => {
+describe('Login Page', () => {
     beforeEach(async () => {
         await LoginView.navTo();
     });
