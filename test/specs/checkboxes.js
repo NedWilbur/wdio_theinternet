@@ -1,5 +1,4 @@
-import CheckboxesView from  '../views/checkboxes.view';
-import SecureView from '../views/secure.view';
+import CheckboxesView from '../views/checkboxes.view';
 
 describe('Checkboxes', () => {
     beforeEach(async () => {
@@ -7,7 +6,7 @@ describe('Checkboxes', () => {
     });
 
     it('header', async () => {
-        await expect(CheckboxesView.header).toBeExisting();
+        await expect(CheckboxesView.header).toHaveText(CheckboxesView.title);
     });
 
     it('Checkbox default values', async () => {

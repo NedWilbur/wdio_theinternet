@@ -1,4 +1,4 @@
-import LoginView from  '../views/login.view';
+import LoginView from '../views/login.view';
 import SecureView from '../views/secure.view';
 
 describe('Login Page', () => {
@@ -7,7 +7,7 @@ describe('Login Page', () => {
     });
 
     it('header', async () => {
-        await expect(LoginView.header).toBeExisting();
+        await expect(LoginView.header).toHaveText(LoginView.title);
     });
 
     it('warning displayed with invalid credentials'), async () => {
