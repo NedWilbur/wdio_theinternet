@@ -1,12 +1,17 @@
 import CheckboxesView from  '../views/checkboxes.view';
 import SecureView from '../views/secure.view';
 
-describe('Login Page', () => {
+describe('Checkboxes', () => {
     beforeEach(async () => {
         await CheckboxesView.navTo();
     });
 
     it('header', async () => {
         await expect(CheckboxesView.header).toBeExisting();
+    });
+
+    it('Checkbox default values', async () => {
+        await expect(CheckboxesView.checkbox1).not.toBeChecked();
+        await expect(CheckboxesView.checkbox2).toBeChecked();
     });
 });
