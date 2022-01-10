@@ -1,6 +1,6 @@
-import Page from './_base.view';
+import BaseView from './_base.view';
 
-class SecurePage extends Page {
+class SecurePage extends BaseView {
     // Elements
     get flashAlert() { return $('#flash'); }
 

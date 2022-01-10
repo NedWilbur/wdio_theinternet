@@ -1,6 +1,6 @@
-import Page from './_base.view';
+import BaseView from './_base.view';
 
-class Checkboxes extends Page {
+class Checkboxes extends BaseView {
     constructor() { super("Checkboxes") }
 
     // Locators
@@ -13,4 +13,4 @@ class Checkboxes extends Page {
     clickCheckBox2() { this.checkbox2.click(); }
 }
 
-export default new LoginPage();
+export default new Checkboxes();
