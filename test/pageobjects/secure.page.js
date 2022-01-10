@@ -1,17 +1,11 @@
+import Page from './_base.page';
 
-
-import Page from './page';
-
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class SecurePage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get flashAlert() {
-        return $('#flash');
-    }
+    // Elements
+    get flashAlert() { return $('#flash'); }
+
+    // Methods
+    navTo() { return super.navTo('secure'); }
 }
 
 export default new SecurePage();

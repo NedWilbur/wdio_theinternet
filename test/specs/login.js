@@ -3,7 +3,7 @@ import SecurePage from '../pageobjects/secure.page';
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
-        await LoginPage.open();
+        await LoginPage.navTo();
 
         await LoginPage.login('tomsmith', 'SuperSecretPassword!');
         await expect(SecurePage.flashAlert).toBeExisting();
@@ -11,5 +11,3 @@ describe('My Login application', () => {
             'You logged into a secure area!');
     });
 });
-
-
