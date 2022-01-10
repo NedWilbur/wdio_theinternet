@@ -1,7 +1,7 @@
-import Page from './_base.page';
+import Page from './_base';
 
 class LoginPage extends Page {
-    constructor(title) { super(title) }
+    constructor() { super("Login") }
 
     // Locators
     get inputUsername() { return $('#username'); }

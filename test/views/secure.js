@@ -1,4 +1,4 @@
-import Page from './_base.page';
+import Page from './_base';
 
 class SecurePage extends Page {
     // Elements
