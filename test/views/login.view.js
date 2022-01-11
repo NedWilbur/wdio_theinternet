@@ -4,7 +4,6 @@ class LoginView extends BaseView {
     constructor() { super("Login Page") }
 
     // Locators
-    get header() { return $('h2'); }
     get inputUsername() { return $('#username'); }
     get inputPassword() { return $('#password');}
     get btnSubmit() { return $('button[type="submit"]'); }

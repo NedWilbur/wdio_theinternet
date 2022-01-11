@@ -1,10 +1,10 @@
 export default class BaseView {
     constructor(title) {
-        this.title = title;
+        this.Title = title;
     }
 
     // Locators
-    get header() { return $('h3'); }
+    get Header() { return $('h3'); }
 
     // Methods
     /**

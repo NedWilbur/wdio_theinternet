@@ -6,7 +6,7 @@ describe('Dropdown List', () => {
     });
 
     it('header', async () => {
-        await expect(DropdownView.header).toHaveText(DropdownView.title);
+        await expect(DropdownView.Header).toHaveText(DropdownView.Title);
     });
 
     it('toggle through options', async () => {

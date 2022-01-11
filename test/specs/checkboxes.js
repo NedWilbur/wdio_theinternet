@@ -6,7 +6,7 @@ describe('Checkboxes', () => {
     });
 
     it('header', async () => {
-        await expect(CheckboxesView.header).toHaveText(CheckboxesView.title);
+        await expect(CheckboxesView.Header).toHaveText(CheckboxesView.Title);
     });
 
     it('Checkbox default values', async () => {

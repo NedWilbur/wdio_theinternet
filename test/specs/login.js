@@ -7,7 +7,7 @@ describe('Login Page', () => {
     });
 
     it('header', async () => {
-        await expect(LoginView.header).toHaveText(LoginView.title);
+        await expect(LoginView.Header).toHaveText(LoginView.Title);
     });
 
     it('warning displayed with invalid credentials'), async () => {
