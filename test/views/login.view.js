@@ -11,10 +11,10 @@ class LoginView extends BaseView {
     // Methods
     navTo() { return super.navTo('login'); }
 
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+    login (username, password) {
+        this.inputUsername.setValue(username);
+        this.inputPassword.setValue(password);
+        this.btnSubmit.click();
     }
 }
 

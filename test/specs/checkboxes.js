@@ -1,24 +1,24 @@
 import CheckboxesView from '../views/checkboxes.view';
 
 describe('Checkboxes', () => {
-    beforeEach(async () => {
-        await CheckboxesView.navTo();
+    beforeEach(() => {
+        CheckboxesView.navTo();
     });
 
-    it('header', async () => {
-        await expect(CheckboxesView.Header).toHaveText(CheckboxesView.Title);
+    it('header', () => {
+        expect(CheckboxesView.Header).toHaveText(CheckboxesView.Title);
     });
 
-    it('Checkbox default values', async () => {
-        await expect(CheckboxesView.checkbox1).not.toBeChecked();
-        await expect(CheckboxesView.checkbox2).toBeChecked();
+    it('Checkbox default values', () => {
+        expect(CheckboxesView.checkbox1).not.toBeChecked();
+        expect(CheckboxesView.checkbox2).toBeChecked();
     });
 
-    it('Checkbox value changes on click', async () => {
-        await CheckboxesView.checkbox1.click();
-        await expect(CheckboxesView.checkbox1).toBeChecked();
+    it('Checkbox value changes on click', () => {
+        CheckboxesView.checkbox1.click();
+        expect(CheckboxesView.checkbox1).toBeChecked();
 
-        await CheckboxesView.checkbox2.click();
-        await expect(CheckboxesView.checkbox2).not.toBeChecked();
+        CheckboxesView.checkbox2.click();
+        expect(CheckboxesView.checkbox2).not.toBeChecked();
     });
 });

@@ -2,23 +2,23 @@ import LoginView from '../views/login.view';
 import SecureView from '../views/secure.view';
 
 describe('Login Page', () => {
-    beforeEach(async () => {
-        await LoginView.navTo();
+    beforeEach(() => {
+        LoginView.navTo();
     });
 
-    it('header', async () => {
-        await expect(LoginView.Header).toHaveText(LoginView.Title);
+    it('header', () => {
+        expect(LoginView.Header).toHaveText(LoginView.Title);
     });
 
-    it('warning displayed with invalid credentials'), async () => {
-        await LoginView.login('tomsmith', 'WrongPassword!');
-        await expect(SecureView.flashAlert).toBeExisting();
-        await expect(SecureView.flashAlert).toHaveTextContaining('Your username is invalid!');
+    it('warning displayed with invalid credentials'), () => {
+        LoginView.login('tomsmith', 'WrongPassword!');
+        expect(SecureView.flashAlert).toBeExisting();
+        expect(SecureView.flashAlert).toHaveTextContaining('Your username is invalid!');
     }
 
-    it('should login with valid credentials', async () => {
-        await LoginView.login('tomsmith', 'SuperSecretPassword!');
-        await expect(SecureView.flashAlert).toBeExisting();
-        await expect(SecureView.flashAlert).toHaveTextContaining('You logged into a secure area!');
+    it('should login with valid credentials', () => {
+        LoginView.login('tomsmith', 'SuperSecretPassword!');
+        expect(SecureView.flashAlert).toBeExisting();
+        expect(SecureView.flashAlert).toHaveTextContaining('You logged into a secure area!');
     });
 });
